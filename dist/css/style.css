@@ -1,0 +1,22 @@
+.no-webp body {
+  background: url("../img/Danilovi_6.jpg") 0 0 no-repeat; }
+
+body {
+  background: #ca8c8c;
+}
+
+body span {
+  color: #4400ff;
+}
+
+@media (max-width: 768px) {
+  span {
+    font-size: 20px;
+  }
+
+  body {
+    background: olivedrab;
+  }
+}
+
+.webp body { background: url(../img/Danilovi_6.webp) 0 0 no-repeat; }

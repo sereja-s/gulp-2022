@@ -1,0 +1,18 @@
+body {
+	background: rgb(202, 140, 140);
+	span {
+		color: rgb(68, 0, 255);
+	}
+	background: url("@img/Danilovi_6.jpg") 0 0 no-repeat;
+}
+
+@media (max-width: 768px) {
+	span {
+		font-size: 20px;
+	}
+}
+@media (max-width: 768px) {
+	body {
+		background: olivedrab;
+	}
+}
