@@ -18,11 +18,15 @@ export const path = {
 		js: `${buildFolder}/js/`,
 		css: `${buildFolder}/css/`,
 		html: `${buildFolder}/`,
+		images: `${buildFolder}/img/`,
+		fonts: `${buildFolder}/fonts/`,
 		files: `${buildFolder}/files/`,
 	},
 	// указываем путь к папке с файлами которые мы хотим копировать (исходники):
 	src: {
 		js: `${srcFolder}/js/app.js`,
+		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
+		svg: `${srcFolder}/img/**/*.svg`,
 		scss: `${srcFolder}/scss/style.scss`,
 		html: `${srcFolder}/*.html`, // смотрим (копируем) только за файлами html в корне исходников (у нас- index.html)
 		files: `${srcFolder}/files/**/*.*`,
@@ -32,6 +36,7 @@ export const path = {
 		js: `${srcFolder}/js/**/*.js`,
 		scss: `${srcFolder}/scss/**/*.scss`,
 		html: `${srcFolder}/**/*.html`, // наблюдаем за изменениями за всеми файлами html во всех папках в исходниках
+		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
 		files: `${srcFolder}/files/**/*.*`,
 	},
 	// отдельные свойства:

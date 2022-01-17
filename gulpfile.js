@@ -21,6 +21,7 @@ import { html } from "./gulp/tasks/html.js";
 import { server } from "./gulp/tasks/server.js";
 import { scss } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js";
+import { images } from "./gulp/tasks/images.js";
 
 
 // функция, которая будет наблюдать за изменениями в файлах папки, путь к которой прописан в path.js:
@@ -30,11 +31,12 @@ function watcher() {
 	gulp.watch(path.watch.html, html);
 	gulp.watch(path.watch.scss, scss);
 	gulp.watch(path.watch.js, js);
+	gulp.watch(path.watch.images, images);
 }
 
 
 // Пропишем основные задачи которые должны выполняться параллельно (обратимся к gulp и его функции parallel()):
-const mainTasks = gulp.parallel(copy, html, scss, js);
+const mainTasks = gulp.parallel(copy, html, scss, js, images);
 
 
 // построение сценариев выполнения задач:
