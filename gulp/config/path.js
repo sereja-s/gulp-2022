@@ -18,7 +18,7 @@ export const path = {
 		js: `${buildFolder}/js/`,
 		css: `${buildFolder}/css/`,
 		html: `${buildFolder}/`,
-		images: `${buildFolder}/img/`,
+		images: `${buildFolder}/img/`, //Здесь же подгружается svgSprive
 		fonts: `${buildFolder}/fonts/`,
 		files: `${buildFolder}/files/`,
 	},
@@ -30,13 +30,14 @@ export const path = {
 		scss: `${srcFolder}/scss/style.scss`,
 		html: `${srcFolder}/*.html`, // смотрим (копируем) только за файлами html в корне исходников (у нас- index.html)
 		files: `${srcFolder}/files/**/*.*`,
+		svgicons: `${srcFolder}/svgicons/*.svg`,//Исходник svgSprive
 	},
 	// указываем путь к папке с файлами за которыми надо следить:
 	watch: {
 		js: `${srcFolder}/js/**/*.js`,
 		scss: `${srcFolder}/scss/**/*.scss`,
 		html: `${srcFolder}/**/*.html`, // наблюдаем за изменениями за всеми файлами html во всех папках в исходниках
-		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
+		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`, //Здесь же наблюдается svgSprive, можно отдельно создать
 		files: `${srcFolder}/files/**/*.*`,
 	},
 	// отдельные свойства:

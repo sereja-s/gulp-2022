@@ -5,7 +5,7 @@ import webpack from "webpack-stream"
 
 // создадим и экспортируем (для использования в других файлах) функцию js для выполнения задачи:
 export const js = () => {
-	return app.gulp.src(app.path.src.js, { sourcemaps: true })
+	return app.gulp.src(app.path.src.js, { sourcemaps: app.isDev }) //true нужно только в режиме разработчика, а в режиме продакшн он не нужен (на видео 1:34:13)
 		// пропишем действиея:
 		// обработка ошибок и вывод сообщений(подсказок):
 		.pipe(app.plugins.plumber(
@@ -17,7 +17,8 @@ export const js = () => {
 		// настройки webpack:
 		.pipe(webpack(
 			{
-				mode: 'development', // режим разработчика
+				//mode: 'development', // режим разработчика
+				mode: app.isBuild ? 'production' : 'development',//Если мы в режиме продакшн(isBuild) указываем production, если нет то указываем development(Режим разработчика)(на видео 1:34:25)
 				output: {
 					filename: 'app.min.js',
 				}
