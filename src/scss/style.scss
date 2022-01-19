@@ -1,9 +1,9 @@
 body {
-	background: rgb(202, 140, 140);
+	color: rgb(239, 247, 239);
+	background: url("@img/фон-min.jpg") 0 0 no-repeat;
 	span {
-		color: rgb(68, 0, 255);
+		color: rgb(48, 3, 170);
 	}
-	background: url("@img/Danilovi_6.jpg") 0 0 no-repeat;
 }
 
 @media (max-width: 768px) {
@@ -13,6 +13,7 @@ body {
 }
 @media (max-width: 1024px) {
 	body {
-		background: olivedrab;
+		background: url("@img/фон-сайта-2-min.jpg") 0 0 no-repeat;
+		color: coral;
 	}
 }
